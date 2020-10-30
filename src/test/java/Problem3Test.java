@@ -1,17 +1,31 @@
 import Problem3.*;
 import org.junit.Test;
 
+import javax.swing.border.TitledBorder;
+
 import static org.junit.Assert.*;
 
 public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
-        // quiz
+        BookFiction f = new BookFiction("t1", "au1", "g1"); //create new objects
+        BookFiction fc = new BookFiction(f);
+
+        fc.setTitle("t3");  //change variables (id should be the same)
+        fc.setAuthor("a3");
+
+        assert(f.equals(fc));   //should pass only if the id are the same
     }
 
     @Test
     public void catchTheBugInMovie() {
-        // quiz
+        MovieAction m = new MovieAction("PG13", "ti1"); //create new objects
+        MovieAction mc = new MovieAction(m);
+
+        mc.setTitle("t3");  //change variables (id should be the same)
+        mc.setRating("PG");
+
+        assert(m.equals(mc));   //should pass only if the id are the same
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
