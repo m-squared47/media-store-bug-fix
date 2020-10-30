@@ -12,7 +12,7 @@ public class Problem3Test {
         BookFiction fc = new BookFiction(f);
 
         fc.setTitle("t3");  //change variables (id should be the same)
-        fc.setAuthor("a3");
+        fc.setAuthor("a3"); //forces the objects to not be the same except the id which we are looking for
 
         assert(f.equals(fc));   //should pass only if the id are the same
     }
@@ -23,7 +23,7 @@ public class Problem3Test {
         MovieAction mc = new MovieAction(m);
 
         mc.setTitle("t3");  //change variables (id should be the same)
-        mc.setRating("PG");
+        mc.setRating("PG"); //forces the objects to not be the same except the id which we are looking for
 
         assert(m.equals(mc));   //should pass only if the id are the same
     }
